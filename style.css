@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+main {
+  min-height: calc(100vh - 80px);
+  background-color: rgb(115 115 115);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 850px;
+  padding: 25px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 25px;
+  gap: 20px;
+}
+.picture {
+  order: 2;
+}
+.desktopImg {
+  display: block;
+}
+
+.mobileImg {
+  display: none;
+}
+.info {
+  order: 1;
+}
+
+@media (max-width: 766px) {
+  main {
+    background-color: #fff;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .picture {
+    order: 1;
+    padding: 0 !important;
+  }
+
+  .info {
+    order: 2;
+    padding: 30px 25px !important;
+  }
+  .desktopImg {
+    display: none;
+  }
+
+  .mobileImg {
+    display: block;
+    width: 100%;
+  }
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+}
+.picture img {
+  width: 100%;
+}
+
+.info {
+  padding: 55px 25px 5px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info h1 {
+  font-size: 45px;
+  margin-bottom: 25px;
+}
+.info p {
+  margin-bottom: 25px;
+}
+.info .checked-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.info .checked-info img {
+  margin-right: 15px;
+}
+.info .checked-info:last-of-type {
+  margin-bottom: 30px;
+}
+
+.info form .labels {
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.labels .checkSpan {
+  margin-left: auto;
+  color: hsla(341, 100%, 57%, 1);
+  display: none;
+}
+.info input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  border: solid 1px rgba(0, 0, 0, 0.4);
+}
+.info form button {
+  width: 100%;
+  height: 50px;
+  background-color: hsl(234, 29%, 20%);
+  color: #fff;
+  border-radius: 10px;
+}
+
+footer {
+  height: 80px;
+  background-color: rgba(2, 132, 199, 1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+footer a {
+  color: rgb(94, 219, 56);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer a:hover {
+  color: #ddd;
+  text-decoration: underline;
+}
+
+/* popup */
+.popup-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.popup-bg.visible {
+  display: flex;
+}
+.popup {
+  width: 400px;
+  height: 430px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 40px;
+}
+.popup h2 {
+  margin-top: 30px;
+  font-size: 50px;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+.popup p {
+  color: rgb(65, 62, 62);
+  margin-bottom: 25px;
+}
+
+#emailAddress {
+  color: black;
+  font-weight: 700;
+}
+.popup button {
+  width: 100%;
+  height: 50px;
+  background-image: linear-gradient(
+    to right,
+    hsla(341, 100%, 57%, 1),
+    hsl(4, 100%, 67%)
+  );
+  border: none;
+  border-radius: 10px;
+}
+
+@media (max-width: 766px) {
+  .popup {
+    width: 100%;
+  }
+  .popup-bg {
+    background-color: #fff;
+  }
+}
