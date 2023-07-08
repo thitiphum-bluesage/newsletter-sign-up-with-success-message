@@ -24,5 +24,5 @@ form.onsubmit = (event) => {
 
 dismissBtn.onclick = function () {
   popup.classList.remove("visible");
-  email.value = "";
+  location.reload();
 };
